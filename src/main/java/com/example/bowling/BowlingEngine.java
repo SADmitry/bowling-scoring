@@ -8,9 +8,17 @@ public class BowlingEngine {
      * @return score of the game
      */
     public int score(int[] rolls) {
+        if (rolls.length < 10) {
+            throw new IllegalArgumentException("Impossibly short match");
+        }
+
         int score = 0;
         int frameIndex = 0;
         for (int frame = 0; frame < 10; frame++) {
+            if (rolls[frameIndex] > 10) {
+                throw new IllegalArgumentException("Not possible to hit that many pins");
+            }
+
             if (isStrike(frameIndex, rolls)) {
                 score += 10 + strikeBonus(frameIndex, rolls);
                 frameIndex++;

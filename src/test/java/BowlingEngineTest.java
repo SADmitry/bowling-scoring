@@ -2,6 +2,7 @@ import com.example.bowling.BowlingEngine;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BowlingEngineTest {
     @Test
@@ -43,6 +44,22 @@ public class BowlingEngineTest {
                 186,
                 engine.score(new int[]{5, 5, 4, 0, 8, 1, 10, 0, 10, 10, 10, 10, 4, 6, 10, 10, 5})
 
+        );
+    }
+
+    @Test
+    public void impossibleMatches() {
+        // Given
+        var engine = new BowlingEngine();
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> engine.score(new int[]{5, 5, 4, 5, 8, 2, 42, 0, 10, 10, 6, 2, 10, 4, 6, 10, 10})
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> engine.score(new int[]{300})
         );
     }
 }
