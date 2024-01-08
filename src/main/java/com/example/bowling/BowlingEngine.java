@@ -4,7 +4,7 @@ public class BowlingEngine {
     /**
      * @param rolls is a flat array of rolls for calling simplicity and potential extern to other languages
      *              Spare is represented as 2 rolls in frame, 10 in sum
-     *              Strike contains no gutter balls (0's)
+     *              See tests for use case examples
      * @return score of the game
      */
     public int score(int[] rolls) {
