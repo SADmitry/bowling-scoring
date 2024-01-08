@@ -11,3 +11,7 @@ For simplicity of interaction with foreign languages interface is kept simple (p
 
 Class contains variety of tests including edge cases.
 To run them use `./gradlew clean test`
+
+### REPL
+
+Feel free to use REPL inside IDEA.

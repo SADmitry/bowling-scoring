@@ -1,5 +1,5 @@
 plugins {
-	java
+	application
 }
 
 group = "com.example"
@@ -7,6 +7,10 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_21
+}
+
+application {
+	mainClass = "com.example.bowling.REPL"
 }
 
 repositories {
