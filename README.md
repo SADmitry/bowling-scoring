@@ -1,3 +1,4 @@
+![Gradle Test](https://github.com/SADmitry/bowling-scoring/actions/workflows/gradle.yml/badge.svg)
 # Bowling Points Calculator
 
 ## Components
